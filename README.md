@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Smart Bookmark App
 
-## Getting Started
+A private real-time bookmark manager built using **Next.js (App Router)** and **Supabase (Auth, Database, Realtime)**, deployed on **Vercel**.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Live Demo
+
+🔗 https://your-vercel-url.vercel.app  
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js 16 (App Router)
+- **Authentication:** Supabase Auth (Google OAuth only)
+- **Database:** Supabase PostgreSQL
+- **Security:** Row Level Security (RLS)
+- **Realtime:** Supabase Realtime (Postgres Changes)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
+
+---
+
+## ✨ Features
+
+- 🔐 Google OAuth login (no email/password)
+- 📌 Add bookmarks (title + URL)
+- 🗑 Delete bookmarks
+- 👤 Bookmarks are private per user
+- ⚡ Real-time updates across multiple tabs
+- ☁️ Fully deployed on Vercel
+
+---
+
+
+No custom backend server was required because Supabase handles:
+
+- Authentication
+- Authorization (RLS)
+- Database
+- Realtime events
+
+---
+
+# 🔒 Security Implementation
+
+Row Level Security (RLS) was enabled on the `bookmarks` table.
+
+Policies created:
+
+### SELECT
+### INSERT
+### DELETE
+
+# Problems Faced & Solutions
+## problems: Google login worked locally but failed after deployment.
+## Cause: Production URL was not added to Google OAuth Authorized Origins.
+
+## problem: supabaseUrl is required
+## Cause: Environment variables were not configured in Vercel.
+
+
+### Local Setup
+git clone https://github.com/your-username/smart-bookmark-app.git
+cd smart-bookmark-app
+
+### Dependencies:
+npm install
+
+### create .env.local:
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+
+### Run:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
