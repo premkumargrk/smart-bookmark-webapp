@@ -6,7 +6,7 @@ A private real-time bookmark manager built using **Next.js (App Router)** and **
 
 ## 🚀 Live Demo
 
-🔗 [https://your-vercel-url.vercel.app ](https://smart-bookmark-webapp-lilac.vercel.app/) 
+🔗 [https://smart-bookmark-webapp-lilac.vercel.app ](https://smart-bookmark-webapp-lilac.vercel.app/) 
 
 ---
 
