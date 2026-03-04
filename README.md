@@ -7,8 +7,10 @@ A private real-time bookmark manager built using **Next.js (App Router)** and **
 ## 🚀 Live Demo
 
 🔗 [https://smart-bookmark-webapp-lilac.vercel.app ](https://smart-bookmark-webapp-lilac.vercel.app/) 
---(Currrently, 02-03-2026 onwards the Supabase is down can't able to access)
---(Now, 04-03-2026 the demo link is working)
+
+(Currrently, 02-03-2026 onwards the Supabase is down can't able to access)
+
+(Now, 04-03-2026 the demo link is working)
 
 ---
 
